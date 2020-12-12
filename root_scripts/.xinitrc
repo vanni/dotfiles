@@ -52,7 +52,8 @@ fi
 $HOME/.screenlayout/monitors.sh
 #xrandr --ouput DP1 --scale 0.75x 0.75 &
 xsetroot -cursor_name left_ptr &
-picom -f &
 nitrogen --restore &
+picom -f &
 exec bspwm
 #exec i3
+#exec spectrwm

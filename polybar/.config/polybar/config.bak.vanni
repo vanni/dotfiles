@@ -87,7 +87,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 modules-left = i3 bspwm
 modules-center = xwindow pacman-updates spotify 
-modules-right = pulseaudio memory cpu networkspeeddown networkspeedup temps date powermenu
+modules-right = filesystem pulseaudio memory cpu eth temperature date powermenu
 tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
@@ -147,7 +147,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 modules-left = i3 bspwm
 modules-center = xwindow 
-modules-right = weather date powermenu
+modules-right = date powermenu
 tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
@@ -220,7 +220,7 @@ pin-workspaces = true
 type = internal/bspwm
 
 label-focused = %icon%
-label-focused-background = ${colors.background}
+label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -236,13 +236,14 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IV;
-ws-icon-4 = V;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
 
 ; Separator in between workspaces
-label-separator = 
+label-separator = |
 
 [module/i3]
 type = internal/i3
@@ -330,20 +331,18 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "  "
-;format-connected-underline = #f90000
-format-underline = #f50a4d
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-ormat-prefix = "    "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = #f90000
+format-underline = #4bffdc
 label = %percentage_used%%
-format-connected-underline = #5e81ac
-
 
 [module/wlan]
 type = internal/network
@@ -386,18 +385,20 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 5
-date = " %d/%m/%Y "
-date-alt = " %d-%m-%Y"
+
+date =
+date-alt = " %Y-%m-%d"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = #0a6cf5
+format-underline = #0a6cf5
+
+label = %date% %time%
 
 [module/pulseaudio]
-
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
@@ -503,51 +504,6 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
-
-
-[module/networkspeeddown]
-type = internal/network
-interface = enp1s0
-label-connected = " %downspeed:7% "
-format-connected = <label-connected>
-format-connected-prefix = "  "
-format-connected-prefix-foreground = #5e81ac
-format-connected-foreground = #d8dee9
-;format-connected-background = #2e3440
-format-connected-underline = #5e81ac
-
-[module/networkspeedup]
-type = internal/network
-interface = enp1s0
-label-connected = " %upspeed:7% "
-format-connected = <label-connected>
-format-connected-prefix = "  "
-format-connected-prefix-foreground = #5e81ac
-format-connected-foreground = ${colors.foreground-alt}
-;format-connected-background = #2e3440
-format-connected-underline = #5e81ac
-
-[module/weather]
-type = custom/script
-exec = ~/.config/polybar/weather.sh
-interval = 3600
-label = " %output%"
-format-foreground = #d8dee9
-;format-background = #2e3440
-format-prefix = ""
-format-prefix-foreground = #ebcb8b
-format-underline = #5e81ac
-
-[module/temps]
-type = custom/script
-exec = ~/.config/polybar/bartemp.sh
-interval = 1000
-label = " %output%"
-format-foreground = #d8dee9
-;format-background = #2e3440
-format-prefix = "  "
-format-prefix-foreground = #a3be8c
-format-underline = #5e81ac
 
 [module/powermenu]
 type = custom/menu
