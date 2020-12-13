@@ -65,3 +65,39 @@ yay -S xdpyinfo
 super + x
 	betterlockscreen -l dimblur
 
+
+## Stow usage
+
+- In the dotfiles directory (...dotty when I clone the repo), create the same strcuture for the directories you want to save in the home folder. Eg:
+
+- **~.config/bspwm/files inside this dir**
+
+- In my ~/dotty I will create the same dir structure as in the .config folder, then I will move all the files from the .config folder to the new structure
+E.g.  **/home/vanni/dotty/bspwm/.config/bspwm**
+
+
+-then I will run the command form the /home/vanni/dotty
+
+``` stow bspwm``` - This will create the symlink:
+
+lrwxrwxrwx 1 vanni vanni 39 Dec 12 21:04 bspwmrc -> **../../dotty/bspwm/.config/bspwm/bspwmrc**
+
+### File outside the **HOME DIR**
+
+For example I want to save the intel video config files
+
+I created the following inside ~/dotty folder:
+```
+xorg.conf.d
+└── xorg.conf.d
+    ├── 20-intel.conf
+    ├── 20-modesetting.conf
+    └── modesetting.conf
+```
+Then I run:
+
+```sudo stow --target=/etc/X11 xorg.conf.d```
+
+
+
+
