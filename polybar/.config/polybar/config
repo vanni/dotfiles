@@ -147,7 +147,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 modules-left = i3 bspwm
 modules-center = xwindow 
-modules-right = weather date powermenu
+modules-right = weather date
 tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
@@ -338,10 +338,10 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-ormat-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
-label = %percentage_used%%
+label =  %percentage_used%%
 format-connected-underline = #5e81ac
 
 
@@ -386,13 +386,13 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 5
-date = " %d/%m/%Y "
+date = "%H:%M  %d/%m/%Y "
 date-alt = " %d-%m-%Y"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+;format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
 
@@ -401,11 +401,11 @@ format-prefix-foreground = ${colors.foreground-alt}
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume =  %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted =  
+label-muted-foreground = #FFF
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -422,7 +422,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+;bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
 type = internal/alsa
@@ -532,10 +532,10 @@ type = custom/script
 exec = ~/.config/polybar/weather.sh
 interval = 3600
 label = " %output%"
-format-foreground = #d8dee9
+;format-foreground = #d8dee9
 ;format-background = #2e3440
-format-prefix = ""
-format-prefix-foreground = #ebcb8b
+format-prefix = ""
+;format-prefix-foreground = #ebcb8b
 ;format-underline = #5e81ac
 
 [module/temps]

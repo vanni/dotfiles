@@ -7,9 +7,13 @@ super + Return
 	xfce4-terminal
 # Applications shortcuts
 
-
 super + @b
 	firefox
+
+super + @f
+	thunar
+
+
 
 # program launcher
 super + @d

@@ -32,7 +32,7 @@ Then open **/etc/fstab** and add the line
 
 ### Pacman
 ```
-sudo pacman -S picom nitrogen lxappearance thunar arandr pacman-contrib pulseaudio pulseaudio-alsa pulseaudio-equalizer alsa-utils playerctl bspwm sxhkd pavucontrol sel feh bc freerdp remmina code 
+sudo pacman -S picom nitrogen lxappearance thunar thunar-volman gvfs arandr pacman-contrib pulseaudio pulseaudio-alsa pulseaudio-equalizer alsa-utils playerctl bspwm sxhkd pavucontrol sel feh bc freerdp remmina code 
 ```
 
 
