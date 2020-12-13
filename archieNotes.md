@@ -98,6 +98,11 @@ Then I run:
 
 ```sudo stow --target=/etc/X11 xorg.conf.d```
 
-
+```
+[vanni@archie dotty]$ tree modprobe.d/
+modprobe.d/
+└── i915.conf
+```
+```sudo stow  --target=/etc/modprobe.d/ modprobe.d/```
 
 
