@@ -85,9 +85,9 @@ font-2 = siji:pixelsize=10;1
 font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
-modules-left = i3 bspwm
-modules-center = xwindow pacman-updates spotify 
-modules-right = pulseaudio memory cpu networkspeeddown networkspeedup temps date powermenu
+modules-left = bspwm pacman-updates
+modules-center = xwindow spotify 
+modules-right = pulseaudio memory cpu networkspeeddown networkspeedup temps weather date powermenu
 tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
@@ -171,9 +171,9 @@ cursor-scroll = ns-resize
 type = custom/script
 exec = checkupdates | wc -l
 interval = 1000
-label = Updates: %output%
+label = %output%
 format-foreground = ${colors.foreground}
-format-prefix = "      "
+format-prefix = " "
 format-prefix-foreground = #ff0000
 
 [module/spotify]

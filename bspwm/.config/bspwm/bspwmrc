@@ -2,14 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-$HOME/.screenlayout/monitors.sh &
+$HOME/.screenlayout/monitor.sh &
 xsetroot -cursor_name left_ptr &
 nitrogen --restore &
 picom -f &
 $HOME/.config/polybar/launch.sh
 
-bspc monitor HDMI1 -d I II 
-bspc monitor DP1 -d III IV V VI
+#bspc monitor HDMI1 -d I II 
+bspc monitor DP1 -d I II III IV V VI
 
 bspc config border_width        1 
 bspc config window_gap          5 
@@ -28,3 +28,7 @@ bspc rule -a Spotify desktop='^5' follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+# My custom floating apps
+
+bspc rule -a thunar state=floating follow=on

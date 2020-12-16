@@ -55,5 +55,3 @@ xsetroot -cursor_name left_ptr &
 #nitrogen --restore &
 #picom -f &
 exec bspwm
-#exec i3
-#exec spectrwm
