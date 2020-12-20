@@ -20,8 +20,8 @@ bspc config gapless_monocle      true
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
 
-bspc rule -a firefox desktop='^1' follow=on
-bspc rule -a Chromium desktop='^1' follow=on
+bspc rule -a firefox desktop='^3' follow=on
+bspc rule -a Chromium desktop='^3' follow=on
 bspc rule -a org.remmina.Remmina desktop='^2' follow=on
 bspc rule -a code-oss desktop='^4' follow=on
 bspc rule -a Spotify desktop='^5' follow=on

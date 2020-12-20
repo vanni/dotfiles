@@ -10,10 +10,8 @@ super + Return
 super + @b
 	firefox
 
-super + @f
+#super + @f
 	thunar
-
-
 
 # program launcher
 super + @d
