@@ -25,7 +25,8 @@ bspc rule -a Chromium desktop='^3' follow=on
 bspc rule -a org.remmina.Remmina desktop='^2' follow=on
 bspc rule -a code-oss desktop='^4' follow=on
 bspc rule -a Spotify desktop='^5' follow=on
-bspc rule -a pcmanfm state=floating
+bspc rule -a Virt-manager desktop='^6' follow=on
+bspc rule -a Pcmanfm desktop ='^3' state=floating follow=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
